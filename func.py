@@ -37,7 +37,7 @@ Finally, starting with ___ will use file:// as handler
 Examples:
 http(s)://_169__254__169__254___latest___user-data.patch.rip/t/302/http
 http(s)://_localhost___manager___html.patch.rip/t/302/http
-https(s)://___etc___passwd.patch.rip/t/302/http
+http(s)://___etc___passwd.patch.rip/t/302/http
 
 
 """
