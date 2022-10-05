@@ -29,7 +29,7 @@ Following replacements take place:
 redirect = redirect.replace('___', '/')
 redirect = redirect.replace('__', '.')
 
-If you want to redirect to plain http:// start with prepend 
+If you want to redirect to plain http:// start with prepend _
 Finally, starting with ___ will use file:// as handler
 
 Examples:
