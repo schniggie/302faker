@@ -1,14 +1,20 @@
 # 302faker
-Simple HTTP 302 Location-Header fake redirector with file:// support
+
+A Simple HTTP 302 Location-Header redirector with `file://` support.
+
+### Usage: 
+
+`curl http://patch.rip/t/302/http`
+
+
+A Simple 302 Location redirector that redirects to the netloc part with some tricks:
+
+
+
+
+`curl -I https://redirect_me__dev___etc___passwd.patch.rip/t/302/http`
 
 ```
-curl http://patch.rip/t/302/http
-
-Simple 302 Location redirector that redirects to the netloc part with some tricks:
-
-    curl -I https://redirect_me__dev___etc___passwd.patch.rip/t/302/http
-
-
     HTTP/2 302 
     date: Wed, 05 Oct 2022 11:26:41 GMT
     content-type: text/plain
@@ -22,19 +28,21 @@ Simple 302 Location redirector that redirects to the netloc part with some trick
     server: cloudflare
     cf-ray: 7555cdbd289d3762-MXP
     alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
-
+``` 
 
 Following replacements take place:
 
-redirect = redirect.replace('___', '/')
-redirect = redirect.replace('__', '.')
+- redirect = redirect.replace('___', '/')
+- redirect = redirect.replace('__', '.')
 
-If you want to redirect to plain http:// start with prepend _
-Finally, starting with ___ will use file:// as handler
+If you want to redirect to plain `http://` start with prepend `_`
+Finally, starting with `__` will use `file://` as handler
 
 Examples:
-http(s)://_169__254__169__254___latest___user-data.patch.rip/t/302/http
-http(s)://_localhost___manager___html.patch.rip/t/302/http
-https(s)://___etc___passwd.patch.rip/t/302/http
+
+- http(s)://_169__254__169__254___latest___user-data.patch.rip/t/302/http
+- http(s)://_localhost___manager___html.patch.rip/t/302/http
+- https(s)://___etc___passwd.patch.rip/t/302/http
 
 
+Made with 🤬 in 🇩🇪
