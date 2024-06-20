@@ -28,6 +28,7 @@ Simple 302 Location redirector that redirects to the netloc part with some trick
 
 Following replacements take place:
 
+redirect = redirect.replace('____', '?')
 redirect = redirect.replace('___', '/')
 redirect = redirect.replace('__', '.')
 
@@ -53,6 +54,7 @@ def handler(ctx, data: io.BytesIO = None):
         redirect=f'http://{redirect[1:]}'
     else:
         redirect=f'https://{redirect[0:]}'
+    redirect = redirect.replace('____', '?')
     redirect = redirect.replace('___', '/')
     redirect = redirect.replace('__', '.')
     ctx.SetResponseHeaders({"Location": redirect}, 302)

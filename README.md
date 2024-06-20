@@ -32,6 +32,7 @@ A Simple 302 Location redirector that redirects to the netloc part with some tri
 
 Following replacements take place:
 
+- redirect = redirect.replace('____', '?')
 - redirect = redirect.replace('___', '/')
 - redirect = redirect.replace('__', '.')
 
